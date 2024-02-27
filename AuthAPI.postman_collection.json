@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "594ee752-d14f-4899-bd8e-9d91543ca87f",
+		"name": "AuthAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24797471"
+	},
+	"item": [
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"ananttyagi@gmail.com\",\r\n    \"name\":\"Anant Tyagi\",\r\n    \"password\":\"123456\",\r\n    \"password2\":\"1234567\",\r\n    \"tc\":\"True\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/register/?Accept=application/json",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"register",
+						""
+					],
+					"query": [
+						{
+							"key": "Accept",
+							"value": "application/json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"ananttyagi1902@gmail.com\",\r\n    \"password\":\"12345678\"\r\n   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/login/?Accept=applications/json",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"login",
+						""
+					],
+					"query": [
+						{
+							"key": "Accept",
+							"value": "applications/json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PROFILE",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA4OTgwMTQxLCJpYXQiOjE3MDg5NzkyNDEsImp0aSI6IjBlYzA3ODgyOTU2ZjQ1NjJhZWZiNTcyYTg3ODAxMTVjIiwidXNlcl9pZCI6Mn0.NpwjQ_QMH94p-jJg1UZJ9zdGKunu2NaprGcnKtn78JE",
+						"type": "text"
+					}
+				],
+				"url": "http://127.0.0.1:8000/api/user/profile"
+			},
+			"response": []
+		},
+		{
+			"name": "ChangePassword",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA5MDI5Mzk0LCJpYXQiOjE3MDkwMjg0OTQsImp0aSI6Ijc1YzM5ZGM4Mjc1OTQ2NGJiNGU5MWY0NGE2ZmMxNTM4IiwidXNlcl9pZCI6Mn0.lXl5CjF1MZNTOdJcQfj_X2ynJWwXrHLdp8VXSNF-2M0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"12345678\",\r\n    \"password2\":\"12345678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/user/changepass/"
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Password Link",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"ananttyagi1902@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/user/reset/"
+			},
+			"response": []
+		},
+		{
+			"name": "ResetPass",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"123456\",\r\n    \"password2\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/user/resetpass/Mg/c32vax-254527436a33710dd7f81bf7df6efd99/"
+			},
+			"response": []
+		}
+	]
+}
